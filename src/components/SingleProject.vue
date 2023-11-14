@@ -52,7 +52,6 @@ function completeProject() {
   // .project__complete
   &_complete {
     border-color: $project-item-complete;
-
   }
 
   // .project__actions
@@ -68,6 +67,9 @@ function completeProject() {
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   // .project__icons
@@ -94,6 +96,7 @@ function completeProject() {
 
   // .project__details
   &__details {
+    word-wrap: break-word;
   }
 }
 </style>
