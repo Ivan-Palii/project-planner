@@ -31,7 +31,9 @@ function completeProject() {
       <h3 class="project__title" @click="showDetails = !showDetails">{{ project.title }}</h3>
       <div class="project__icons">
         <span class="project__icon material-icons-outlined" @click="completeProject">done</span>
-        <span class="project__icon material-icons-outlined">edit</span>
+        <RouterLink :to="{ name: 'editProject', params: { id: project.id } }" class="project__icon">
+          <span class="project__icon material-icons-outlined">edit</span>
+        </RouterLink>
         <span class="project__icon material-icons-outlined" @click="deleteProject">delete</span>
       </div>
     </div>
@@ -67,7 +69,7 @@ function completeProject() {
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
